@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Melvin Portfolio</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Arapey" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css_Home/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css_Home/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css_Home/Home.css"/>
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body>
+			<div class='cursor'></div>
+			<div class='cursor'></div>
+		<nav class="demo-3">
+			<main class="main main--demo-3">
+				<div class="content content--fixed">
+				</div>
+				<div class="content content--demo-3">
+					<div class="hamburger hamburger--demo-3 js-hover">
+						<div class="hamburger__line hamburger__line--01">
+							<div class="hamburger__line-in hamburger__line-in--01"></div>
+						</div>
+						<div class="hamburger__line hamburger__line--02">
+							<div class="hamburger__line-in hamburger__line-in--02"></div>
+						</div>
+						<div class="hamburger__line hamburger__line--03">
+							<div class="hamburger__line-in hamburger__line-in--03"></div>
+						</div>
+						<div class="hamburger__line hamburger__line--cross01">
+							<div class="hamburger__line-in hamburger__line-in--cross01"></div>
+						</div>
+						<div class="hamburger__line hamburger__line--cross02">
+							<div class="hamburger__line-in hamburger__line-in--cross02"></div>
+						</div>
+					</div>
+					<div class="global-menu">
+						<div class="global-menu__wrap">
+							<a class="global-menu__item global-menu__item--demo-3" href="index.html">Accueil</a>
+							<a class="global-menu__item global-menu__item--demo-3" href="index2.html">Projets</a>
+							<a class="global-menu__item global-menu__item--demo-3" href="Page_Contact/index.html">Contact</a>
+						</div>
+					</div>
+					<svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+						<path class="shape-overlays__path"></path>
+						<path class="shape-overlays__path"></path>
+						<path class="shape-overlays__path"></path>
+					</svg>
+				</div>
+			</main>
+			<script src="js_Home/demo.js"></script>
+			<script src="js_Home/easings.js"></script>
+			<script src="js_Home/demo3.js"></script>
+		</nav>
+		<img src="Setting1.svg" alt="Setting" class="img_Setting"/>
+		<img src="Setting1.svg" alt="Setting" class="img_Setting2"/>
+		<section class="Section-1">
+			<div class="container">
+				<div class="row">
+				<svg viewBox="0 0 960 300">
+				<symbol id="s-text">
+					<text text-anchor="middle" x="50%" y="80%">Melvin Debot</text>
+				</symbol>
+			
+				<g class = "g-ants">
+					<use xlink:href="#s-text" class="text"></use>
+					<use xlink:href="#s-text" class="text"></use>
+					<use xlink:href="#s-text" class="text"></use>
+					<use xlink:href="#s-text" class="text"></use>
+					<use xlink:href="#s-text" class="text"></use>
+				</g>
+			</svg>
+			<div id="str"></div>
+			</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document)
+  		.mousemove(function(e) {
+    	$('.cursor')
+      		.eq(0)
+      		.css({
+        		left: e.pageX,
+        		top: e.pageY
+      	});
+    	setTimeout(function() {
+      		$('.cursor')
+        		.eq(1)
+        		.css({
+          			left: e.pageX,
+          			top: e.pageY
+        		});
+    		}, 100);
+  	})
+	</script>
+	<script>
+		var string = "Développeur Front-End";
+		var str = string.split("");
+		var el = document.getElementById('str');
+		(function animate() {
+			str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
+			var running = setTimeout(animate, 90);
+		})();
+	</script>
+	</body>
+</html>

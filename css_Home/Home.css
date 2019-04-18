@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.Section-1{
+    height:100%;
+    width:100%;
+    padding-top:15%;
+    
+    
+  }
+  .Section-2{
+    background-image: url(/BackgroundWaves.png);
+    background-size: cover;
+    height: 100vw;
+    width: 100%;
+    
+  }
+  svg {
+      display: block;
+      font: 100px 'Lato';
+      width: 100%;
+      height: 300px;
+      margin: 0 auto;
+  }
+ 
+  .img_Setting{
+        position:absolute;
+        height:200px;
+        left:-100px;
+        animation: spinning 30s infinite alternate;
+  }
+  .img_Setting2{
+    position:absolute;
+    height:200px;
+    right:-100px;
+    top:400px;
+    animation: spinning 30s infinite alternate;
+  }
+  #str{
+      font-family: sans-serif;
+      font-size: 30px;
+      color: #679EBF;
+      font-weight: bold;
+      text-align: center;
+  }
+  @media (max-width:400px){
+    #str{
+        font-family: sans-serif;
+        font-size: 15px;
+        color: #679EBF;
+        font-weight: bold;
+        text-align: center;
+    }
+  }
+  @keyframes spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .text {
+      fill: none;
+      stroke: white;
+      stroke-dasharray: 6% 29%;
+      stroke-width: 5px;
+      stroke-dashoffset: 0%;
+      animation: stroke-offset 5.5s infinite linear;
+  }
+  
+  .text:nth-child(1){
+      stroke: #679EBF;
+      animation-delay: -10;
+  }
+  
+  .text:nth-child(2){
+      stroke: #8AD2FF;
+      animation-delay: -20s;
+  }
+  
+  .text:nth-child(3){
+      stroke: #45697F;
+      animation-delay: -30s;
+  }
+  
+  .text:nth-child(4){
+      stroke: #223540;
+      animation-delay: -40s;
+  }
+  
+  .text:nth-child(5){
+      stroke: #7CBDE5;
+      animation-delay: -15s;
+  }
+  
+  @keyframes stroke-offset{
+      100% {stroke-dashoffset: -35%;}
+  }
+  .Section-2{
+      height: 100vh;
+      width: 100%;
+  }
+  .Titre{
+    text-align:center;
+    width:100%;
+    height:10%;
+    
+  }
